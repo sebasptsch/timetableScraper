@@ -1,0 +1,28 @@
+{
+  "name": "utssubjectscraper",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.3.11",
+    "@types/cheerio": "^0.22.31",
+    "@types/signale": "^1.4.4",
+    "cheerio": "^1.0.0-rc.12",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@keyvhq/core": "^1.6.14",
+    "@keyvhq/sqlite": "^1.6.20",
+    "@prisma/client": "^4.5.0",
+    "p-throttle": "^5.0.0",
+    "prisma": "^4.5.0",
+    "signale": "^1.4.0",
+    "vis-network": "^9.1.2"
+  },
+  "type": "module"
+}

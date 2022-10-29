@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Subject {
+  id   Int     @id
+  name String?
+  url  String?
+
+  courseArea String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  requisites Subject[] @relation("Requisites")
+  requiredBy Subject[] @relation("Requisites")
+
+  antirequisites Subject[] @relation("Antirequisites")
+  notrequiredBy  Subject[] @relation("Antirequisites")
+}
